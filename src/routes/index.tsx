@@ -1,24 +1,43 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useEffect } from "react";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+// The Nexora AI project is a standalone HTML/CSS/JS + Bootstrap 5 app served
+// from /nexora/. The root route simply forwards visitors to its landing page.
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Nexora AI | GenAI Gamified Self-Learning Platform" },
+      {
+        name: "description",
+        content:
+          "Nexora AI helps students learn real skills with personalized paths, quizzes, an AI study buddy, XP points and rewards.",
+      },
+      { property: "og:title", content: "Nexora AI | Gamified Self-Learning Platform" },
+      {
+        property: "og:description",
+        content:
+          "Personalized learning paths, quizzes, progress tracking, AI study buddy and reward points for students.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
+  useEffect(() => {
+    window.location.replace("/nexora/index.html");
+  }, []);
+
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="flex min-h-screen items-center justify-center bg-background">
+      <p className="text-sm text-muted-foreground">
+        Loading Nexora AI…{" "}
+        <a className="underline" href="/nexora/index.html">
+          Open manually
+        </a>
+      </p>
     </div>
   );
 }

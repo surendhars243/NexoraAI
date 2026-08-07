@@ -1,0 +1,159 @@
+/* ==========================================================
+   Nexora AI - Global stylesheet (landing, login, register)
+   Light theme • rounded cards • soft shadows
+   ========================================================== */
+
+:root {
+  --nx-primary: #3f6bff;
+  --nx-primary-dark: #2c50cc;
+  --nx-accent: #ff8a3d;
+  --nx-bg: #f5f7fb;
+  --nx-card: #ffffff;
+  --nx-text: #1f2430;
+  --nx-muted: #6b7280;
+  --nx-radius: 18px;
+  --nx-shadow: 0 10px 30px rgba(31, 36, 48, 0.08);
+}
+
+body {
+  background-color: var(--nx-bg);
+  color: var(--nx-text);
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+/* ---------- Reusable helpers ---------- */
+.nx-card {
+  background: var(--nx-card);
+  border: 1px solid rgba(31, 36, 48, 0.06);
+  border-radius: var(--nx-radius);
+  box-shadow: var(--nx-shadow);
+}
+
+.btn-nexora {
+  background: var(--nx-primary);
+  color: #fff;
+  border-radius: 12px;
+  padding: 0.55rem 1.3rem;
+  font-weight: 600;
+  border: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.btn-nexora:hover {
+  background: var(--nx-primary-dark);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.btn-nexora-outline {
+  border: 2px solid var(--nx-primary);
+  color: var(--nx-primary);
+  border-radius: 12px;
+  padding: 0.5rem 1.3rem;
+  font-weight: 600;
+  background: transparent;
+}
+.btn-nexora-outline:hover {
+  background: var(--nx-primary);
+  color: #fff;
+}
+
+.text-nexora { color: var(--nx-primary); }
+
+/* ---------- Brand / logo ---------- */
+.nx-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-weight: 700;
+  font-size: 1.35rem;
+  color: var(--nx-text);
+  text-decoration: none;
+}
+.nx-logo-mark {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: linear-gradient(135deg, var(--nx-primary), #7aa2ff);
+  box-shadow: 0 6px 14px rgba(63, 107, 255, 0.35);
+}
+
+/* ---------- Navbar ---------- */
+.nx-navbar {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 12px rgba(31, 36, 48, 0.05);
+}
+
+/* ---------- Hero ---------- */
+.nx-hero {
+  padding: 5rem 0 4rem;
+  background: linear-gradient(180deg, #eef3ff 0%, var(--nx-bg) 100%);
+}
+.nx-hero h1 {
+  font-weight: 800;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.15;
+}
+.nx-hero p.lead { color: var(--nx-muted); }
+
+/* Flow chips: Enroll -> Set Goal -> ... */
+.nx-flow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+.nx-chip {
+  background: #fff;
+  border: 1px solid rgba(63, 107, 255, 0.2);
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--nx-primary);
+  box-shadow: var(--nx-shadow);
+}
+
+/* ---------- Feature cards ---------- */
+.nx-feature-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  font-size: 1.1rem;
+  background: #eef3ff;
+  color: var(--nx-primary);
+  margin-bottom: 0.9rem;
+}
+.nx-feature:hover { transform: translateY(-4px); }
+.nx-feature { transition: transform 0.2s ease; }
+
+/* ---------- Auth pages ---------- */
+.nx-auth-wrap {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, #eef3ff, #f7f9ff);
+}
+.nx-auth-card {
+  width: 100%;
+  max-width: 430px;
+  padding: 2.2rem;
+}
+.nx-auth-card .form-control {
+  border-radius: 12px;
+  padding: 0.7rem 0.9rem;
+}
+
+/* ---------- Footer ---------- */
+.nx-footer {
+  background: #fff;
+  border-top: 1px solid rgba(31, 36, 48, 0.06);
+  padding: 2.5rem 0 1.5rem;
+  color: var(--nx-muted);
+}
