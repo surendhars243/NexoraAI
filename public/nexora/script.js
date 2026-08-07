@@ -33,17 +33,19 @@ function renderFlow() {
   ).join("");
 }
 
-/** Renders the feature cards grid. */
+/** Renders the features as a vertical list of cards. */
 function renderFeatures() {
   const grid = document.getElementById("featureGrid");
   if (!grid) return;
   grid.innerHTML = FEATURES.map(
     (f) => `
-    <div class="col-md-6 col-lg-4">
-      <div class="nx-card nx-feature p-4 h-100">
+    <div class="nx-feature-wrap">
+      <div class="nx-card nx-feature p-3 d-flex align-items-center gap-3">
         <div class="nx-feature-icon"><i class="fa-solid ${f.icon}"></i></div>
-        <h6 class="fw-bold">${f.title}</h6>
-        <p class="text-muted small mb-0">${f.text}</p>
+        <div>
+          <h6 class="fw-bold mb-1">${f.title}</h6>
+          <p class="text-muted small mb-0">${f.text}</p>
+        </div>
       </div>
     </div>`
   ).join("");
