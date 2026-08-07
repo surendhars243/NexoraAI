@@ -1,0 +1,149 @@
+/* ==========================================================
+   Nexora AI - dashboard.css
+   Shared layout for every logged-in page (sidebar + navbar).
+   ========================================================== */
+
+:root {
+  --nx-sidebar-w: 250px;
+}
+
+/* ---------- Sidebar ---------- */
+.nx-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--nx-sidebar-w);
+  height: 100vh;
+  background: #fff;
+  border-right: 1px solid rgba(31, 36, 48, 0.07);
+  padding: 1.2rem 1rem;
+  overflow-y: auto;
+  z-index: 1045;
+  transition: transform 0.25s ease;
+}
+.nx-sidebar .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  border-radius: 12px;
+  padding: 0.6rem 0.85rem;
+  color: var(--nx-muted);
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+}
+.nx-sidebar .nav-link i { width: 18px; text-align: center; }
+.nx-sidebar .nav-link:hover { background: #f1f4fb; color: var(--nx-primary); }
+.nx-sidebar .nav-link.active {
+  background: var(--nx-primary);
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(63, 107, 255, 0.3);
+}
+
+/* ---------- Main area ---------- */
+.nx-main {
+  margin-left: var(--nx-sidebar-w);
+  min-height: 100vh;
+}
+.nx-topbar {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(31, 36, 48, 0.06);
+  padding: 0.8rem 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+}
+.nx-topbar .form-control { border-radius: 12px; }
+.nx-content { padding: 1.5rem; }
+
+/* ---------- Welcome banner ---------- */
+.nx-welcome {
+  background: linear-gradient(120deg, var(--nx-primary), #7aa2ff);
+  color: #fff;
+  border-radius: var(--nx-radius);
+  padding: 1.75rem;
+  box-shadow: 0 12px 28px rgba(63, 107, 255, 0.28);
+}
+.nx-welcome .progress { background: rgba(255, 255, 255, 0.3); }
+.nx-welcome .progress-bar { background: #fff; }
+
+/* ---------- Stat cards ---------- */
+.nx-stat-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  font-size: 1.1rem;
+}
+.nx-stat-icon.blue { background: #eaf0ff; color: #3f6bff; }
+.nx-stat-icon.yellow { background: #fff5e0; color: #e39a12; }
+.nx-stat-icon.red { background: #ffeceb; color: #e5533d; }
+.nx-stat-icon.green { background: #e6f8ef; color: #1e9e63; }
+
+/* ---------- Roadmap (learning path) ---------- */
+.nx-road-step { position: relative; }
+.nx-road-arrow { text-align: center; color: #c4cbd8; margin: 0.35rem 0; }
+.nx-road-num {
+  width: 40px; height: 40px; border-radius: 50%;
+  display: grid; place-items: center; font-weight: 700;
+  background: #eef3ff; color: var(--nx-primary); flex-shrink: 0;
+}
+.nx-road-step.done .nx-road-num { background: #e6f8ef; color: #1e9e63; }
+.nx-road-step.locked { opacity: 0.6; }
+
+/* ---------- Chat (AI Study Buddy) ---------- */
+.nx-chat-area {
+  height: 60vh;
+  overflow-y: auto;
+  padding: 1rem;
+  background: #f8fafd;
+  border-radius: var(--nx-radius);
+}
+.nx-msg {
+  max-width: 78%;
+  padding: 0.7rem 1rem;
+  border-radius: 16px;
+  margin-bottom: 0.7rem;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+.nx-msg.bot { background: #fff; border: 1px solid rgba(31,36,48,.07); border-bottom-left-radius: 4px; }
+.nx-msg.user { background: var(--nx-primary); color: #fff; margin-left: auto; border-bottom-right-radius: 4px; }
+
+/* ---------- Quiz ---------- */
+.nx-option {
+  display: block;
+  border: 2px solid #e6e9f2;
+  border-radius: 14px;
+  padding: 0.85rem 1rem;
+  margin-bottom: 0.7rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  background: #fff;
+}
+.nx-option:hover { border-color: var(--nx-primary); }
+.nx-option.selected { border-color: var(--nx-primary); background: #eef3ff; }
+
+/* ---------- Course thumbnail ---------- */
+.nx-course-thumb {
+  height: 130px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  font-size: 2.4rem;
+  color: #fff;
+}
+
+/* ---------- Leaderboard highlight ---------- */
+tr.nx-me { background: #eef3ff !important; font-weight: 600; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 991.98px) {
+  .nx-sidebar { transform: translateX(-100%); }
+  .nx-sidebar.open { transform: translateX(0); }
+  .nx-main { margin-left: 0; }
+  .nx-backdrop {
+    position: fixed; inset: 0; background: rgba(0,0,0,.35); z-index: 1040;
+  }
+}
