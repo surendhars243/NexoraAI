@@ -118,6 +118,8 @@ body {
 }
 
 /* ---------- Feature cards ---------- */
+.nx-feature-wrap { max-width: 600px; margin-left: auto; margin-right: auto; }
+.nx-feature-wrap + .nx-feature-wrap { margin-top: 1rem; }
 .nx-feature-icon {
   width: 48px;
   height: 48px;
@@ -127,10 +129,10 @@ body {
   font-size: 1.1rem;
   background: #eef3ff;
   color: var(--nx-primary);
-  margin-bottom: 0.9rem;
+  flex-shrink: 0;
 }
-.nx-feature:hover { transform: translateY(-4px); }
 .nx-feature { transition: transform 0.2s ease; }
+.nx-feature:hover { transform: translateY(-4px); }
 
 /* ---------- Auth pages ---------- */
 .nx-auth-wrap {
