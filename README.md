@@ -1,4 +1,4 @@
-# Nexora Learn & Earn
+# Nexora AI
 
 Prompt: Design Nexora AI Dashboard (2nd Year IT College Project)
 
