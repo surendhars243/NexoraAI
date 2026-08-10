@@ -1,11 +1,4 @@
 # Nexora AI
-
-Prompt: Design Nexora AI Dashboard (2nd Year IT College Project)
-
-You are an expert UI/UX Designer and Frontend Web Developer.
-
-Design a clean, modern, and responsive web application UI called Nexora AI.
-
 Project Overview
 
 Nexora AI is a GenAI-powered Gamified Self-Learning Platform that helps students build real-world skills through personalized learning, quizzes, progress tracking, AI assistance, and reward points.
@@ -449,10 +442,6 @@ Progress
 
 Expected Output
 
-Generate a fully responsive HTML, CSS, and JavaScript project with separate files for each page.
-
-The design should look like a professional college mini project that is realistic for a second-year IT student to build and present. The interface should clearly demonstrate:
-
 Student Login
 
 Dashboard
@@ -474,20 +463,6 @@ Profile
 Admin Dashboard
 
 Keep the design simple, attractive, and easy to understand. Avoid unnecessary complexity while showcasing the core ideas of Nexora AI: personalized learning, gamification, quizzes, progress tracking, and reward points.
-
-This project was built with [Lovable](https://lovable.dev).
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/af95978d-c1bc-4a98-ba87-ddbe60473017).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
 
 ```sh
 git clone <this-repository-url>
