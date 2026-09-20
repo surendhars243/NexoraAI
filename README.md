@@ -458,15 +458,3 @@ Rewards
 
 Leaderboard
 
-Profile
-
-Admin Dashboard
-
-Keep the design simple, attractive, and easy to understand. Avoid unnecessary complexity while showcasing the core ideas of Nexora AI: personalized learning, gamification, quizzes, progress tracking, and reward points.
-
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
-```
